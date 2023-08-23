@@ -9,7 +9,8 @@
 }
 
 .parallax-background {
-  background-image: url("fotoperucas.jpg"); /* Substitua pelo caminho da sua imagem de fundo */
+  background-image: url("fotoperucas.jpg");
+  /* Substitua pelo caminho da sua imagem de fundo */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -40,7 +41,107 @@ h1 {
 p {
   font-size: 1.2em;
 }
-  #pagina{
 
-    box-shadow: rgba(0, 0, 0, 0.5) 0px, 7px, 29px, 0px;
-    }
+#pagina {
+
+  box-shadow: rgba(0, 0, 0, 0.5) 0px, 7px, 29px, 0px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  box-sizing: border-box;
+  position: relative;
+}
+.close {
+  float: right;
+  cursor: pointer;
+}
+.bg-pink {
+  background-color: pink;
+}
+#escolhas{
+  margin-top: 20px;
+  font-family:'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #660f53;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.img-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.lightbox{width: 1400px; height: 512px}
+.title{text-align: center; padding: 5px 0px; background: #660f53;width: 820px;left: 50%;position: absolute; top:0px; margin-left: -410px; font-family:'Montserrat', sans-serif; font-weight: 700; color:#cca1bc; text-transform: uppercase; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}	
+.col-md-12{width: 100%;} 
+.faq{width: 100%}
+.perguntas_ul {height: auto;list-style: none;cursor: pointer;}
+.perguntas_ul li b{font-family:'Montserrat', sans-serif; font-weight: 500; color:#b759a7;}
+.perguntas_ul li div{font-family: 'Montserrat', sans-serif;font-weight: 500;color: #58595b;}
+.ativar_faq{font-weight: 700 !important}
+/*RESPONSIVO*/
+@media (min-width: 1294px) and (max-width: 1498px){
+.lightbox{width: 1180px; height: 512px}
+}
+@media (min-width: 1199px) and (max-width: 1293px){
+.lightbox{width: 1180px; height: 512px}
+}
+@media (min-width: 993px) and (max-width: 1198px){
+.lightbox{width: 980px; height: 403px}	
+}
+@media (min-width: 680px) and (max-width: 992px){
+.title{width: 620px; margin-left: -310px}
+.lightbox{width: 664px; height: 830px}	
+.perguntas_ul{position: relative; left: -7px; font-size: 17px;}
+}
+@media (min-width: 512px) and (max-width: 679px){
+.title{width: 400px; margin-left: -200px; font-size: 13px}
+.lightbox {width: 496px;height: 1100px;}
+.perguntas_ul{position: relative; left: -7px; font-size: 13px;}
+}
+@media (min-width: 392px) and (max-width: 511px){
+.title{width: 320px; margin-left: -160px; font-size: 13px}
+.lightbox {width: 374px;height: 950px;}
+.perguntas_ul{position: relative; left: -7px; font-size: 13px;}
+}
+@media (min-width: 323px) and (max-width: 391px){
+.title{width: 215px; margin-left: -107px; font-size: 13px}
+.lightbox {width: 307px;height: 950px;}
+.perguntas_ul{position: relative; left: -16px; font-size: 13px;}
+}
+@media (min-width: 287px) and (max-width: 322px){
+.title{width: 215px; margin-left: -107px; font-size: 13px}
+.lightbox {width: 270px;height: 950px;}
+.perguntas_ul{position: relative; left: -7px; font-size: 13px;}
+}
+@media (min-width: 272px) and (max-width: 286px){
+.title{width: 215px; margin-left: -107px; font-size: 13px}
+.lightbox {width: 256px;height: 950px;}
+.perguntas_ul{position: relative; left: -16px; font-size: 13px;}
+}
+@media (max-width: 271px){
+.title{width: 215px; margin-left: -107px; font-size: 13px}
+.lightbox {width: 216px;height: 950px;}	
+.perguntas_ul{position: relative; left: -28px; font-size: 13px;}
+}
