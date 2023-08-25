@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confecção de Perucas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .atividade {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            /* Certifique-se de que a div pai tenha uma altura definida */
+        }
+
+        .video-container iframe {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Confecção de Perucas Criativas</h1>
+    </header>
+    <div class="container">
+        <div class="content active">
+            <p style="text-align: justify;">Confecção de Perucas Criativas: Aprenda a Criar Acessórios Personalizados
+                Bem-vindo à nossa página dedicada à confecção de perucas! Aqui, você
+                aprenderá os passos fundamentais para criar perucas deslumbrantes e
+                versáteis que podem ser usadas para expressar sua criatividade, mudar
+                de visual ou atender a necessidades específicas. Seja você um entusiasta
+                da moda, um apaixonado por cosplay ou alguém em busca de soluções capilares,
+                nossa aula abrangente irá guiá-lo através do processo.</p>
+
+            <div class="video-container" id="videoum">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jFY4xuz45ss?si=_WW_w-Bq1coxdDHG"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <button id="nextBtn">Próximo</button>
+        </div>
+
+        <div class="content">
+            <h2>Materiais Essenciais</h2>
+            <ul>
+                <li>Tela de Peruca ou Touca de Peruca</li>
+                <li>Cabelo Sintético ou Natural</li>
+                <li>Agulha de Peruca</li>
+                <li>Linha de Peruca</li>
+                <li>Tesouras de Costura</li>
+                <li>Alfinetes de Costura</li>
+                <li>Suporte para Peruca ou Manequim de Cabeça</li>
+                <li>Clipes de Cabelo</li>
+                <li>Cola para Peruca (Opcional)</li>
+                <li>Pentes e Escovas de Cabelo</li>
+            </ul>
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn2">Próximo</button>
+        </div>
+        <div class="content">
+            <h2>Passo a Passo</h2>
+            <ol>
+                <li>Preparação Inicial</li>
+                <li>Montagem da Base</li>
+                <li>Preparando o Cabelo</li>
+                <li>Processo de Costura Manual</li>
+                <li>Ventilação Personalizada (Opção de Uso de Cola)</li>
+                <li>Toque Final e Acabamento</li>
+                <li>Testando e Personalizando</li>
+            </ol>
+
+            <p style="text-align: justify;">
+                Lembre-se, a confecção de perucas é uma arte que exige paciência e prática.
+                Não hesite em experimentar diferentes estilos, cores e técnicas para criar perucas únicas
+                que reflitam sua individualidade. Com dedicação e criatividade, você poderá dominar a arte
+                da confecção de perucas e desfrutar da satisfação de ver suas criações ganharem vida!
+            </p>
+            <button id="prevBtn2">Anterior</button>
+            <button id="nextBtn3">Próximo</button>
+        </div>
+        <div class="content">
+            <h1 style="text-align: center;">PARABÉNS VOCÊ CHEGOU AO FINAL DESSA PRIMEIRA AULA</h1>
+            <p style="text-align: center;">Vamos fazer nossa primeira atividade!</p>
+            <button id="atividade">Atividade 1</button>
+            <button id="prevBtn3">Anterior</button>
+        </div>
+    </div>
+
+    <script>
+        const contents = document.querySelectorAll('.content');
+        const nextBtns = document.querySelectorAll('[id^="nextBtn"]');
+        const prevBtns = document.querySelectorAll('[id^="prevBtn"]');
+        let currentContentIndex = 0;
+
+        nextBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                contents[currentContentIndex].classList.remove('active');
+                contents[currentContentIndex + 1].classList.add('active');
+                currentContentIndex++;
+                updateButtonVisibility();
+            });
+        });
+
+        prevBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                contents[currentContentIndex].classList.remove('active');
+                contents[currentContentIndex - 1].classList.add('active');
+                currentContentIndex--;
+                updateButtonVisibility();
+            });
+        });
+
+        function updateButtonVisibility() {
+            nextBtns.forEach((btn, index) => {
+                btn.style.display = index === currentContentIndex ? 'block' : 'none';
+            });
+
+            prevBtns.forEach((btn, index) => {
+                btn.style.display = index === currentContentIndex ? 'block' : 'none';
+            });
+        }
+    </script>
+
+</body>
+
+</html>

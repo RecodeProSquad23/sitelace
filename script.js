@@ -38,3 +38,44 @@ $(document).ready(function () {
         $(this).addClass('ativar_faq');
     });
 });
+
+$(document).ready(function () {
+    // Função para mostrar o conteúdo de acordo com o ID do botão
+    function showContent(contentId) {
+      $(".content").hide(); // Esconde todos os conteúdos
+      $("#" + contentId).show(); // Mostra o conteúdo correspondente ao ID
+    }
+  
+    // Ao clicar nos botões do menu lateral
+    $("#opencursos").click(function () {
+      showContent("meuscursos");
+    });
+  
+    $("#openaulas").click(function () {
+      showContent("aulas");
+    });
+  
+    $("#openatividades").click(function () {
+      showContent("atividades");
+    });
+  
+    $("#openavaliacoes").click(function () {
+      showContent("avaliacoes");
+    });
+  
+    $("#opencertificados").click(function () {
+      showContent("certificados");
+    });
+  
+    $("#openperfil").click(function () {
+      showContent("perfil");
+    });
+  
+    $("#openrecursos").click(function () {
+      showContent("recursos");
+    });
+  
+    // Ao carregar a página, exibe o conteúdo inicial
+    showContent("meuscursos");
+  });
+  
