@@ -155,6 +155,18 @@ function mostraCadastro() {
 }
 
 
+
+function mostraLoginD(){
+    document.querySelector('.loginDoador').style.display = 'block';
+    document.querySelector('.formularioDoador').style.display = 'none';
+}
+
+function mostraCadastroD() {
+    document.querySelector(".loginDoador").style.display = "none";
+    document.querySelector(".formularioDoador").style.display = "block";
+}
+
+
 const openModalButtonAluno = document.getElementById('openModalButtonAluno');
 const modal = document.getElementById('myModal');
 const closeModal = document.querySelector('.close');
