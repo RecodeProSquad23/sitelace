@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+    <main class="mainLogin">
+        <!--CADASTRO DE ALUNO-->
+    
+        <!--Opcao de login e cadastro-->
+        <div class="opcao">
+          <button type="submit" class="escolha" onclick="mostraLogin()">Login</button>
+          <button type="submit" class="escolha" onclick="mostraCadastro()">Cadastrar</button>
+        </div>
+        <!--  FORMULARIO DE CADASTRO DE ALUNO QUE POR PADRÃO NÃO É MOSTRADO-->
+        <form action="" method="" class="formulario">
+          <fieldset>
+            <legend>Cadastrar Aluno</legend> 
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" placeholder="Indique o CPF" required><br><br>
+    
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Indique o Nome" required><br><br>
+    
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Indique o Endereço" required><br><br>
+    
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" placeholder="Indique o a senha" required><br><br>
+    
+          <label for="confirma">Confirma:</label>
+          <input type="password" id="confirma" name="confirma" placeholder="Confirme a senha" required><br><br>
+    
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="+55 xx xxxxx xxxx" required><br><br>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Indique o E-Mail" required><br><br>
+    
+        <div class="botao">
+            <button type="button" class="escolha" onclick="cadastrar()">Cadastrar</button>
+        </div>
+          </fieldset>
+        </form>
+    
+        <!--OPÇÃO DE LOGIN-->
+    
+        <form action="" method="" class="login">
+          <fieldset>
+            <legend>Login</legend> 
+          
+          <label for="emailLogin">Email:</label>
+          <input type="email" id="emailLogin" name="emailLogin" placeholder="Indique o E-Mail" required><br><br>
+    
+          <label for="senhaLogin">Senha:</label>
+          <input type="password" id="senhaLogin" name="senhaLogin" placeholder="Indique o a senha" required><br><br>     
+    
+        <div class="botao">
+            <button type="button" class="escolha" onclick="fazerLogin()">Login</button>
+        </div>
+          </fieldset>
+        </form>
+    <script src="../js/login.js"></script>
+</body>
+</html>
